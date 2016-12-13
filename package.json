@@ -4,6 +4,7 @@
   "description": "The website for right is right.",
   "main": "index.js",
   "scripts": {
+    "start": "gulp live",
     "lint": "eslint ."
   },
   "repository": {
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/yadex205/right-is-right/issues"
   },
-  "homepage": "https://github.com/yadex205/right-is-right#readme"
+  "homepage": "https://github.com/yadex205/right-is-right#readme",
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^2.3.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "rimraf": "^2.5.4"
+  }
 }
