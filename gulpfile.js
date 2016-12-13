@@ -1,12 +1,15 @@
 const browserSync = require('browser-sync')
 const gulp = require('gulp')
 const plug = require('gulp-load-plugins')()
+const rimraf = require('rimraf')
 
 const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
 const JS_SRC = 'src/js/**/*.js'
 
-gulp.task('live', () => {
+gulp.task('build', ['clean', 'html', 'css', 'js'])
+
+gulp.task('live', ['build'], () => {
     gulp.watch(HTML_SRC, ['html'])
     gulp.watch(CSS_SRC, ['css'])
     gulp.watch(JS_SRC, ['js'])
@@ -15,18 +18,22 @@ gulp.task('live', () => {
     })
 })
 
+gulp.task('clean', (next) => {
+    rimraf('htdocs/', () => { next() })
+})
+
 gulp.task('html', () => {
-    gulp.src(HTML_SRC)
+    return gulp.src(HTML_SRC)
         .pipe(plug.plumber())
         .pipe(plug.ignore('_*.ejs'))
         .pipe(plug.ejs({}, { ext: '.html' }))
         .pipe(plug.htmlmin())
-        .pipe(gulp.dst('./htdocs'))
+        .pipe(gulp.dest('./htdocs'))
         .pipe(browserSync.stream())
 })
 
 gulp.task('css', () => {
-    gulp.src(CSS_SRC)
+    return gulp.src(CSS_SRC)
         .pipe(plug.plumber())
         .pipe(plug.sass())
         .pipe(gulp.dest('./htdocs/css'))
@@ -34,7 +41,7 @@ gulp.task('css', () => {
 })
 
 gulp.task('js', () => {
-    gulp.src(JS_SRC)
+    return gulp.src(JS_SRC)
         .pipe(plug.plumber())
         .pipe(plug.uglify())
         .pipe(gulp.dest('./htdocs/js'))
