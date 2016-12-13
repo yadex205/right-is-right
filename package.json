@@ -1,6 +1,6 @@
 {
   "name": "right-is-right",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The website for right is right.",
   "main": "index.js",
   "scripts": {
