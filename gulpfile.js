@@ -2,9 +2,9 @@ const browserSync = require('browser-sync')
 const gulp = require('gulp')
 const plug = require('gulp-load-plugins')()
 
-const HTML_SRC = './src/html/**/*.ejs'
-const CSS_SRC = './src/css/**/*.scss'
-const JS_SRC = './src/js/**/*.js'
+const HTML_SRC = 'src/html/**/*.ejs'
+const CSS_SRC = 'src/css/**/*.scss'
+const JS_SRC = 'src/js/**/*.js'
 
 gulp.task('live', () => {
     gulp.watch(HTML_SRC, ['html'])
