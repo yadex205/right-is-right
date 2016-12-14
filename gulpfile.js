@@ -2,12 +2,15 @@ const browserSync = require('browser-sync')
 const gulp = require('gulp')
 const plug = require('gulp-load-plugins')()
 const rimraf = require('rimraf')
+const runSequence = require('run-sequence')
 
 const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
 const JS_SRC = 'src/js/**/*.js'
 
-gulp.task('build', ['clean', 'html', 'css', 'js'])
+gulp.task('build', (next) => {
+    runSequence('clean', ['html', 'css', 'js'], next)
+})
 
 gulp.task('live', ['build'], () => {
     gulp.watch(HTML_SRC, ['html'])

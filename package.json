@@ -4,8 +4,9 @@
   "description": "The website for right is right.",
   "main": "index.js",
   "scripts": {
-    "start": "gulp live",
-    "lint": "eslint ."
+    "clean": "gulp clean",
+    "lint": "eslint .",
+    "start": "gulp live"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "run-sequence": "^1.2.2"
   }
 }
