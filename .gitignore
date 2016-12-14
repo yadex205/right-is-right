@@ -3,6 +3,10 @@
 /node_modules
 npm-*.log
 
+# Bower
+
+/bower_components
+
 # Project
 
 /htdocs

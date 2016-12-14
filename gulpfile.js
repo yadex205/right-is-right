@@ -6,7 +6,11 @@ const runSequence = require('run-sequence')
 
 const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
-const JS_SRC = 'src/js/**/*.js'
+const JS_SRC = [
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/slick-carousel/slick/slick.js',
+    'src/js/**/*.js'
+]
 
 gulp.task('build', (next) => {
     runSequence('clean', ['html', 'css', 'js'], next)
@@ -47,6 +51,7 @@ gulp.task('js', () => {
     return gulp.src(JS_SRC)
         .pipe(plug.plumber())
         .pipe(plug.uglify())
+        .pipe(plug.concat('index.js'))
         .pipe(gulp.dest('./htdocs/js'))
         .pipe(browserSync.stream())
 })

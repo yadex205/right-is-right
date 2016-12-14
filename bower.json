@@ -1,0 +1,21 @@
+{
+  "name": "right-is-right",
+  "description": "The website for right is right.",
+  "main": "index.js",
+  "authors": [
+    "Kanon Kakuno <yadex205@outlook.jp>"
+  ],
+  "license": "CC-BY-4.0",
+  "homepage": "https://github.com/yadex205/right-is-right",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}
