@@ -9,6 +9,7 @@ body {
   height: 100%;
   background-color: $color-lightgreen;
   font-family: $font-normal;
+  color: $color-darkgreen;
 }
 
 .global-header {
@@ -48,9 +49,26 @@ body {
 
 
   .page-title {
+    margin-bottom: 48px;
     text-align: right;
     font-size: 48px;
     font-family: $font-typography;
     letter-spacing: 6px;
   }
+}
+
+.carousel-page {
+  &.credit {
+    color: $color-green;
+    font-size: 14px;
+
+    dl {
+      margin: 0 auto;
+      width: 400px;
+    }
+  }
+
+
+
+
 }
