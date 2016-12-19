@@ -7,8 +7,7 @@ const runSequence = require('run-sequence')
 const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
 const JS_SRC = [
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/slick-carousel/slick/slick.js',
+    'bower_components/vue/dist/vue.min.js',
     'src/js/**/*.js'
 ]
 const IMG_SRC = 'src/img/**/*'

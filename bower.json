@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "slick-carousel": "^1.6.0"
+    "vue": "^2.1.6"
   }
 }
