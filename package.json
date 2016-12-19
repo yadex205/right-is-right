@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yadex205/right-is-right#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.5",
     "eslint": "^3.12.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
