@@ -10,3 +10,6 @@ npm-*.log
 # Project
 
 /htdocs
+
+
+.DS_Store
