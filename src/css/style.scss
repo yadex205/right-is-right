@@ -62,13 +62,17 @@ body {
     color: $color-green;
     font-size: 14px;
 
+    img {
+      display: block;
+      width: 160px;
+      margin: 0 auto;
+      margin-bottom: 48px;
+      opacity: 0.8;
+    }
+
     dl {
       margin: 0 auto;
       width: 400px;
     }
   }
-
-
-
-
 }
