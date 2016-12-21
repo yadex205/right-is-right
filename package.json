@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "gulp clean",
     "lint": "eslint .",
-    "start": "gulp live"
+    "start": "forever start -c nodemon gulpfile.js live",
+    "stop": "forever stop gulpfile.js",
+    "restart": "forever restart gulpfile.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "eslint": "^3.12.1",
+    "forever": "^0.15.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-ejs": "^2.3.0",
@@ -30,6 +33,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
+    "nodemon": "^1.11.0",
     "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2"
   }

@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    ".eslintrc.json",
+    ".gitignore",
+    "bower.json",
+    "htdocs",
+    "src",
+    "package.json"
+  ],
+  "exec": "gulp --gulpfile"
+}
