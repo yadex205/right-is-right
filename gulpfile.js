@@ -17,7 +17,7 @@ const EJS_ARGS = {
         'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
         'css/style.css'
     ],
-    section: ['top', 'about', 'character', 'stage', 'distribution', 'credit']
+    section: ['top', 'about', 'character', 'distribution', 'credit']
 }
 
 gulp.task('build', (next) => {
