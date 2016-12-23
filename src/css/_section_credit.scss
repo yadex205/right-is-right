@@ -1,0 +1,27 @@
+@import 'variable';
+
+.section.credit {
+
+  .oy-brigade-logo-and-message {
+    text-align: center;
+  }
+
+  .credit-list,
+  .about-dependencies {
+    color: rgba($color-lightgreen, 0.8);
+  }
+
+  .contributor {
+    border-bottom: 1px solid $color-gray;
+    margin: 48px 0 12px;
+  }
+
+  .about-dependencies {
+    margin-top: 64px;
+    font-size: 14px;
+
+    a {
+      color: inherit;
+    }
+  }
+}

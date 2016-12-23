@@ -10,7 +10,10 @@ const JS_SRC = 'src/js/**/*.js'
 const IMG_SRC = 'src/img/**/*'
 
 const EJS_ARGS = {
-    css: ['css/style.css'],
+    css: [
+        'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        'css/style.css'
+    ],
     section: ['top', 'about', 'character', 'stage', 'distribution', 'credit']
 }
 

@@ -3,6 +3,7 @@
 @import 'mixins';
 
 @import 'section_character';
+@import 'section_credit';
 @import 'modal';
 
 html {
@@ -11,6 +12,7 @@ html {
 
 body {
   height: 100%;
+  min-width: 640px;
   font-family: $font-default;
   color: $color-white;
   background-color: $color-green;

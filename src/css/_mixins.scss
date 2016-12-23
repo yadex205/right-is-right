@@ -1,6 +1,7 @@
 @mixin header-footer($place: 'top') {
   position: fixed;
   width: 100%;
+  min-width: 640px;
   height: 80px;
 
   @if $place == 'top' {
