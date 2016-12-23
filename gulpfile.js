@@ -11,7 +11,7 @@ const IMG_SRC = 'src/img/**/*'
 
 const EJS_ARGS = {
     css: ['css/style.css'],
-    section: ['top', 'about', 'play', 'character', 'stage', 'distribution', 'credit']
+    section: ['top', 'about', 'character', 'stage', 'distribution', 'credit']
 }
 
 gulp.task('build', (next) => {
