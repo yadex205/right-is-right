@@ -6,10 +6,7 @@ const runSequence = require('run-sequence')
 
 const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
-const JS_SRC = [
-    'bower_components/vue/dist/vue.min.js',
-    'src/js/**/*.js'
-]
+const JS_SRC = 'src/js/**/*.js'
 const IMG_SRC = 'src/img/**/*'
 
 gulp.task('build', (next) => {
