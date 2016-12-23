@@ -8,6 +8,9 @@ const HTML_SRC = 'src/html/**/*.ejs'
 const CSS_SRC = 'src/css/**/*.scss'
 const JS_SRC = 'src/js/**/*.js'
 const IMG_SRC = 'src/img/**/*'
+const BOWER_DEPS_JS = [
+    'bower_components/smoothscroll/dist/smoothscroll.js'
+]
 
 const EJS_ARGS = {
     css: [
@@ -18,7 +21,7 @@ const EJS_ARGS = {
 }
 
 gulp.task('build', (next) => {
-    runSequence('clean', ['html', 'css', 'js', 'img'], next)
+    runSequence('clean', ['html', 'css', 'js', 'img', 'bower'], next)
 })
 
 gulp.task('live', ['build'], () => {
@@ -67,4 +70,9 @@ gulp.task('img', () => {
     return gulp.src(IMG_SRC)
         .pipe(gulp.dest('htdocs/img'))
         .pipe(browserSync.stream())
+})
+
+gulp.task('bower', () => {
+    return gulp.src(BOWER_DEPS_JS).
+        pipe(gulp.dest('htdocs/js'))
 })
