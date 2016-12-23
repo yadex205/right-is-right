@@ -1,0 +1,21 @@
+@mixin header-footer($place: 'top') {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+
+  @if $place == 'top' {
+    top: 0;
+  } @else {
+    bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    transform: skewY(-4deg);
+    transform-origin: if($place == 'top', left top, right bottom);
+    background-color: $color-lightgreen;
+  }
+}

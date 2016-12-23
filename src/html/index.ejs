@@ -6,6 +6,7 @@
     <% css.forEach(function(cssPath) { %>
       <link href="<%= cssPath %>" rel="stylesheet"/>
     <% }) %>
+    <script src="js/index.js"></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -18,7 +19,18 @@
       </header>
 
       <footer class="page-footer">
-        About Character Stage Distribution Credit
+        <div class="page-footer-content">
+          <ul class="links">
+            <li class="link-item"><a href="#section-about">About</a></li>
+            <li class="link-item"><a href="#section-character">Character</a></li>
+            <li class="link-item"><a href="#section-stage">Stage</a></li>
+            <li class="link-item"><a href="#section-distribution">Distribution</a></li>
+            <li class="link-item"><a href="#section-credit">Credit</a></li>
+          </ul>
+          <div class="copyright">
+            &copy; 2016 OY Brigade All rights reserved.
+          </div>
+        </div>
       </footer>
     </div>
   </body>
