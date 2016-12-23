@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'variable';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.page-wrapper {
+  height: 100%;
+  background-color: $color-green;
+  color: $color-white;
+  overflow-y: auto;
+
+  .section {
+    min-height: 100%;
+  }
+}

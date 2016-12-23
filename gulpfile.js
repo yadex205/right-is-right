@@ -9,6 +9,11 @@ const CSS_SRC = 'src/css/**/*.scss'
 const JS_SRC = 'src/js/**/*.js'
 const IMG_SRC = 'src/img/**/*'
 
+const EJS_ARGS = {
+    css: ['css/style.css'],
+    section: ['top', 'about', 'play', 'character', 'stage', 'distribution', 'credit']
+}
+
 gulp.task('build', (next) => {
     runSequence('clean', ['html', 'css', 'js', 'img'], next)
 })
@@ -19,7 +24,8 @@ gulp.task('live', ['build'], () => {
     gulp.watch(JS_SRC, ['js'])
     gulp.watch(IMG_SRC, ['img'])
     browserSync.init({
-        server: { baseDir: './htdocs' }
+        server: { baseDir: './htdocs' },
+        port: 3005
     })
 })
 
@@ -31,7 +37,7 @@ gulp.task('html', () => {
     return gulp.src(HTML_SRC)
         .pipe(plug.plumber())
         .pipe(plug.ignore('_*.ejs'))
-        .pipe(plug.ejs({}, { ext: '.html' }))
+        .pipe(plug.ejs(EJS_ARGS, { ext: '.html' }))
         .pipe(plug.htmlmin())
         .pipe(gulp.dest('./htdocs'))
         .pipe(browserSync.stream())

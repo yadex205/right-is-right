@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "forever start -c nodemon gulpfile.js live",
     "stop": "forever stop gulpfile.js",
-    "restart": "forever restart gulpfile.js"
+    "restart": "forever restart gulpfile.js",
+    "log": "forever logs gulpfile.js"
   },
   "repository": {
     "type": "git",

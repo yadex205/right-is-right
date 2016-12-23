@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>right &rarr; right 〜右は正義〜</title>
+    <% css.forEach(function(cssPath) { %>
+      <link href="<%= cssPath %>" rel="stylesheet"/>
+    <% }) %>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <% section.forEach(function (pagename) { %>
+        <%- include('_' + pagename) %>
+      <% }) %>
+    </div>
+
+    <header class="page-header">
+
+    </header>
+
+    <footer class="page-footer">
+
+    </footer>
+  </body>
+</html>
