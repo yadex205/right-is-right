@@ -33,9 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }, transitionTime)
         }
 
-        Array.from(modal.querySelectorAll('[data-modal-close]')).forEach(function(modalCloser) {
-            modalCloser.addEventListener('click', modal.$close)
-        })
+        var closeButton = document.createElement('div')
+        closeButton.innerText = '閉じる'
+        closeButton.classList.add('modal-close-button')
+        closeButton.addEventListener('click', modal.$close)
+        modal.appendChild(closeButton)
     })
 
     Array.from(document.querySelectorAll('[data-modal-open]')).forEach(function(modalOpener) {
