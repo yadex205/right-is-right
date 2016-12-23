@@ -1,0 +1,12 @@
+@import 'variable';
+
+.section.distribution {
+  .distribution-info {
+    border-bottom: 1px solid $color-gray;
+  }
+
+  .distribution-info-description {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+}

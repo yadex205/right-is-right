@@ -6,4 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return false
         }
     })
+
+    var pageWrapper = document.querySelector('.page-wrapper')
+
+    function checkLogoShouldBeLarge () {
+        var logo = document.querySelector('.rir-header-logo')
+        logo.style.width = pageWrapper.scrollTop < 100 ? '360px' : '240px'
+    }
+
+    pageWrapper.addEventListener('scroll', checkLogoShouldBeLarge)
+
+    checkLogoShouldBeLarge()
 })

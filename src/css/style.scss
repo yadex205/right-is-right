@@ -2,7 +2,9 @@
 @import 'variable';
 @import 'mixins';
 
+@import 'section_top';
 @import 'section_character';
+@import 'section_distribution';
 @import 'section_credit';
 @import 'modal';
 
@@ -40,6 +42,13 @@ body {
 
 .page-header {
   @include header-footer('top');
+
+  .rir-header-logo {
+    position: relative;
+    width: 240px;
+    padding: 24px 0 0 32px;
+    transition: width 0.5s;
+  }
 }
 
 .page-footer {
@@ -67,6 +76,7 @@ body {
       a {
         color: $color-white;
         text-decoration: none;
+        text-shadow: -1px 1px $color-gray, 1px -1px $color-white;
 
         &:hover {
           color: $color-lightgreen;
