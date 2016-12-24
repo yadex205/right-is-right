@@ -1,9 +1,12 @@
+@import 'variable';
+
 .section.top {
   position: relative;
   max-width: 100%;
   background-image: url('../img/rir_background.jpg');
   background-size: cover;
   background-position: bottom left;
+  box-shadow: inset 0 -30px 28px $color-green;
 
   .top-bomb {
     position: absolute;

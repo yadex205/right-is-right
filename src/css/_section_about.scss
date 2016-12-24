@@ -1,6 +1,16 @@
+@import 'variable';
+
 .section.about {
+  .subtitle {
+    font-size: 36px;
+    line-height: 72px;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 1px solid $color-gray;
+  }
+
   .pv {
     width: 100%;
-    margin: 48px 0;
+    margin-bottom: 48px;
   }
 }
