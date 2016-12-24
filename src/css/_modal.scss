@@ -8,7 +8,7 @@
   height: 100%;
   box-sizing: border-box;
   padding: 64px 48px;
-  background-color: rgba($color-white, 0.85);
+  background-color: rgba($color-white, 0.9);
   color: $color-black;
   z-index: 10000;
   transition: left 0.8s;
@@ -36,4 +36,10 @@
 
   box-sizing: border-box;
   border: 4px solid $color-gray;
+
+  &:hover {
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+  }
 }
